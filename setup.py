@@ -45,13 +45,13 @@ def config_setup():
 	import configparser
 	banner()
 	cpass = configparser.RawConfigParser()
-	cpass.add_section('credd')
+	cpass.add_section('cre')
 	xid = input(green+"[+] API ID: "+red)
-	cpass.set('credd', 'id', xid)
+	cpass.set('cre', 'id', xid)
 	xhash = input(green+"[+] HASH ID: "+red)
-	cpass.set('credd', 'hash', xhash)
+	cpass.set('cre', 'hash', xhash)
 	xphone = input(green+"[+] Número de telefone: "+red)
-	cpass.set('credd', 'phone', xphone)
+	cpass.set('cre', 'phone', xphone)
 	setup = open('config.data', 'w')
 	cpass.write(setup)
 	setup.close()
@@ -61,8 +61,8 @@ def merge_csv():
 	import pandas as pd
 	import sys
 	banner()
-	file1 = pd.redad_csv(sys.argv[2])
-	file2 = pd.redad_csv(sys.argv[3])
+	file1 = pd.read_csv(sys.argv[2])
+	file2 = pd.read_csv(sys.argv[3])
 	print(green+'[!] Fundindo '+sys.argv[2]+' & '+sys.argv[3]+' ...')
 	print(green+'[!] Arquivos grandes podem demorar um pouco')
 	merge = file1.merge(file2, on='username')
