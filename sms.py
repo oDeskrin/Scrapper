@@ -29,9 +29,9 @@ class main():
         try:
             cpass = configparser.RawConfigParser()
             cpass.read('config.data')
-            api_id = cpass['cred']['id']
-            api_hash = cpass['cred']['hash']
-            phone = cpass['cred']['phone']
+            api_id = cpass['cre']['id']
+            api_hash = cpass['cre']['hash']
+            phone = cpass['cre']['phone']
         except KeyError:
             os.system('clear')
             main.banner()
@@ -62,7 +62,7 @@ class main():
                 user['name'] = row[3]
                 users.append(user)
         print(green+"[1] Enviar SMS por ID de usuário\n[2] Enviar SMS por NOME de usuário")
-        mode = int(input(green+"[+] Escolha: "+red))
+        mode = int(input(green+"[+] Opção: "+red))
          
         message = input(green+"[+] Insira uma mensagem: "+red)
          
