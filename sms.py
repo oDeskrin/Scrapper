@@ -10,7 +10,7 @@ import time
 red="\033[1;31m"
 green="\033[1;32m"
 cyan="\033[1;36m"
-SLEEP_TIME = 30
+SLEEP_TIME = 10
 
 class main():
 
