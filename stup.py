@@ -81,7 +81,7 @@ def update_tool():
 		print(green+'[!] Solicitando arquivos novos...')
 		os.system("""
 			curl -s -O https://raw.githubusercontent.com/oDeskrin/Scrapper/master/add.py
-			curl -s -O https://raw.githubusercontent.com/oDeskrin/Scrapper/master/scraper.py
+			curl -s -O https://raw.githubusercontent.com/oDeskrin/Scrapper/master/scrapper.py
 			curl -s -O https://raw.githubusercontent.com/oDeskrin/Scrapper/master/setup.py
 			curl -s -O https://raw.githubusercontent.com/oDeskrin/Scrapper/master/sms.py
 			chmod 777 *.py
