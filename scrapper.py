@@ -16,7 +16,7 @@ def banner():
     {green}╚═╗ │   ├┬┘ ├─┤ ├─┘ ├─┘ ├┤  ├┬┘
     {green}╚═╝ └─┘ ┴└─ ┴ ┴ ┴   ┴   └─┘ ┴└─
 
-                versão: 1.1
+                versão: 1.0.0
             https://t.me/oDeskrin
             """)
 
@@ -24,9 +24,9 @@ cpass = configparser.RawConfigParser()
 cpass.read('config.data')
 
 try:
-    api_id = cpass['cred']['id']
-    api_hash = cpass['cred']['hash']
-    phone = cpass['cred']['phone']
+    api_id = cpass['cre']['id']
+    api_hash = cpass['cre']['hash']
+    phone = cpass['cre']['phone']
     client = TelegramClient(phone, api_id, api_hash)
 except KeyError:
     os.system('clear')
