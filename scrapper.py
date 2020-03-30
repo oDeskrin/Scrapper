@@ -16,7 +16,7 @@ def banner():
     {green}╚═╗ │   ├┬┘ ├─┤ ├─┘ ├─┘ ├┤  ├┬┘
     {green}╚═╝ └─┘ ┴└─ ┴ ┴ ┴   ┴   └─┘ ┴└─
 
-                versão: 1.0.0
+                versão: 1.1
             https://t.me/oDeskrin
             """)
 
@@ -67,7 +67,7 @@ for chat in chats:
 print(green+'[+] Selecione um grupo para extrair usuários:'+red)
 i=0
 for g in groups:
-    print(green+'['+cyan+str(i)+green+']'+cyan+' - '+ g.title)
+    print(green+'['+red+str(i)+green+']'+cyan+' - '+ g.title)
     i+=1
  
 print('')
