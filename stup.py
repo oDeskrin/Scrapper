@@ -12,11 +12,11 @@ def banner():
 	{green}╚═╗ ├┤   │  │ │ ├─┘
 	{green}╚═╝ └─┘  ┴  └─┘ ┴
 
-                versão: 1.1
+                versão: 1.0.0
             https://t.me/oDeskrin
 	""")
 
-def redquiredments():
+def redquests():
 	def csv_lib():
 		banner()
 		print(cyan+'[+] Isto pode demorar algum tempo.')
