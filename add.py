@@ -80,7 +80,7 @@ class main():
             try:
                 print(green+"[+] Enviando mensagem para:", user['name'])
                 client.send_message(receiver, message.format(user['name']))
-                print(green+"[+] Tempo de envio e de 1 a 10 segundos")
+                print(green+"[+] O intervalo de envio e de 1 a 10 segundos")
                 time.sleep(random.randrange(1, 10))
             except PeerFloodError:
                 print(red+"[!] Erro de flod do telegram. \n[!] Script parando. \n[!] Tente novamente mais tarde.")
