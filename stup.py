@@ -12,7 +12,7 @@ def banner():
 	{green}╚═╗ ├┤   │  │ │ ├─┘
 	{green}╚═╝ └─┘  ┴  └─┘ ┴
 
-                versão: 1.0.0
+                versão: 1.1
             https://t.me/oDeskrin
 	""")
 
