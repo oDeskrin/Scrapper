@@ -111,8 +111,8 @@ for user in users:
 	        else:
 	            sys.exit(red+"[!] Modo selecionado inválido. Tente novamente.")
 	        client(InviteToChannelRequest(target_group_entity,[user_to_add]))
-	        print(green+"[+] O intervalo de adição e de 1/15 segundos")
-	        time.sleep(random.randrange(1, 15))
+	        print(green+"[+] O intervalo de adição e de 1/10 segundos")
+	        time.sleep(random.randrange(1, 10))
 	    except PeerFloodError:
 	        print(red+"[!] Erro de flod do telegram. \n[!] Script parando. \n[!] Tente novamente mais tarde.")
 	    except UserPrivacyRestrictedError:
