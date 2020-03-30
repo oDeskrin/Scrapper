@@ -10,7 +10,7 @@ import time
 red="\033[1;31m"
 green="\033[1;32m"
 cyan="\033[1;36m"
-SLEEP_TIME = 5
+SLEEP_TIME = 10000
 
 class main():
 
@@ -80,8 +80,8 @@ class main():
             try:
                 print(green+"[+] Enviando mensagem para:", user['name'])
                 client.send_message(receiver, message.format(user['name']))
-                print(green+"[+] O intervalo de envio e de 1 a 10 segundos")
-                time.sleep(random.randrange(1, 10))
+                print(green+"[+] O intervalo de envio e de 1 a 10000 segundos")
+                time.sleep(random.randrange(1, 10000))
             except PeerFloodError:
                 print(red+"[!] Erro de flod do telegram. \n[!] Script parando. \n[!] Tente novamente mais tarde.")
                 client.disconnect()
