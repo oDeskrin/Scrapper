@@ -21,7 +21,7 @@ def banner():
     {green}╚═╗ │   ├┬┘ ├─┤ ├─┘ ├─┘ ├┤  ├┬┘
     {green}╚═╝ └─┘ ┴└─ ┴ ┴ ┴   ┴   └─┘ ┴└─
 
-                versão: 1.1
+                versão: 1.0.0
             https://t.me/oDeskrin
             """)
 
@@ -29,9 +29,9 @@ cpass = configparser.RawConfigParser()
 cpass.read('config.data')
 
 try:
-    api_id = cpass['cred']['id']
-    api_hash = cpass['cred']['hash']
-    phone = cpass['cred']['phone']
+    api_id = cpass['cre']['id']
+    api_hash = cpass['cre']['hash']
+    phone = cpass['cre']['phone']
     client = TelegramClient(phone, api_id, api_hash)
 except KeyError:
     os.system('clear')
@@ -88,7 +88,7 @@ for group in groups:
     i+=1
 
 print(green+'[+] Selecione um grupo para adicionar os usuários')
-g_index = input(green+"[!] Escolha o número referente ao grupo : "+red)
+g_index = input(green+"[!] Escolha o número referente ao grupo: "+red)
 target_group=groups[int(g_index)]
  
 target_group_entity = InputPeerChannel(target_group.id,target_group.access_hash)
