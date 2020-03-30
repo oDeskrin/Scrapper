@@ -1,4 +1,3 @@
-#!/bin/env python3
 from telethon.sync import TelegramClient
 from telethon.tl.functions.messages import GetDialogsRequest
 from telethon.tl.types import InputPeerEmpty, InputPeerChannel, InputPeerUser
@@ -21,7 +20,7 @@ def banner():
     {green}╚═╗ │   ├┬┘ ├─┤ ├─┘ ├─┘ ├┤  ├┬┘
     {green}╚═╝ └─┘ ┴└─ ┴ ┴ ┴   ┴   └─┘ ┴└─
 
-                versão: 1.0.0
+                versão: 1.1
             https://t.me/oDeskrin
             """)
 
@@ -93,7 +92,7 @@ target_group=groups[int(g_index)]
  
 target_group_entity = InputPeerChannel(target_group.id,target_group.access_hash)
  
-print(green+"1] Adicionar por ID de usuário\n[2] Adicionar por NOME de usuário")
+print(green+"[1] Adicionar por ID de usuário\n[2] Adicionar por NOME de usuário")
 mode = int(input(green+"[+] Opção: "+red)) 
 n = 0
  
@@ -112,7 +111,7 @@ for user in users:
 	        else:
 	            sys.exit(red+"[!] Modo selecionado inválido. Tente novamente.")
 	        client(InviteToChannelRequest(target_group_entity,[user_to_add]))
-	        print(green+"[+] O intervá-lo de adição e de 1/15 segundos")
+	        print(green+"[+] O intervalo de adição e de 1/15 segundos")
 	        time.sleep(random.randrange(1, 15))
 	    except PeerFloodError:
 	        print(red+"[!] Erro de flod do telegram. \n[!] Script parando. \n[!] Tente novamente mais tarde.")
