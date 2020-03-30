@@ -16,7 +16,7 @@ def banner():
             https://t.me/oDeskrin
 	""")
 
-def redquests():
+def requirements():
 	def csv_lib():
 		banner()
 		print(cyan+'[+] Isto pode demorar algum tempo.')
@@ -33,8 +33,8 @@ def redquests():
 		pass
 	print(green+"[+] Instalando requisitos...")
 	os.system("""
-		pip3 install telethon redquests configparser
-		python3 -m pip install telethon redquests configparser
+		pip3 install telethon requirements configparser
+		python3 -m pip install telethon requirements configparser
 		touch config.data
 		""")
 	banner()
@@ -70,7 +70,7 @@ def merge_csv():
 	print(green+'[!] Arquivo salvo como "output.csv"\n')
 
 def update_tool():
-	import redquests as r
+	import requirements as r
 	banner()
 	source = r.get("https://raw.githubusercontent.com/oDeskrin/Scrapper/master/.image/.version")
 	if source.text == '3':
@@ -99,7 +99,7 @@ try:
 		print(green+'[+] selecione o módulo: '+red+sys.argv[1])
 		update_tool()
 	elif any ([sys.argv[1] == '--install', sys.argv[1] == '-i']):
-		redquiredments()
+		requirements()
 	elif any ([sys.argv[1] == '--help', sys.argv[1] == '-h']):
 		banner()
 		print("""$ python3 setup.py -m file1.csv file2.csv
