@@ -101,7 +101,7 @@ for user in users:
     if n % 50 == 0:
 	    time.sleep(1)
 	    try:
-	        print ("[+] Adicionando {}".format(user['id']))
+	        print (green+"[+] Adicionando {}".format(user['id']))
 	        if mode == 1:
 	            if user['username'] == "":
 	                continue
@@ -111,8 +111,8 @@ for user in users:
 	        else:
 	            sys.exit(red+"[!] Modo selecionado inválido. Tente novamente.")
 	        client(InviteToChannelRequest(target_group_entity,[user_to_add]))
-	        print(green+"[+] O intervalo de adição e de 1 a 10 segundos")
-	        time.sleep(random.randrange(1, 10))
+	        print(green+"[+] O intervalo de adição e de 1 a 10000 segundos")
+	        time.sleep(random.randrange(1, 10000))
 	    except PeerFloodError:
 	        print(red+"[!] Erro de flod do telegram. \n[!] Script parando. \n[!] Tente novamente mais tarde.")
 	    except UserPrivacyRestrictedError:
